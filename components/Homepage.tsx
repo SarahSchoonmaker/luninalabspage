@@ -171,8 +171,8 @@ export default function Homepage() {
           <h3>Lumina Labs</h3>
           <p>Play. Learn. Grow.</p>
         </div>
-        <a href="mailto:hello@luminalabs.io" className={styles.footerLink}>
-          hello@luminalabs.io
+        <a href="mailto:support@llabgames.com" className={styles.footerLink}>
+          llabgames.com
         </a>
       </footer>
     </div>
