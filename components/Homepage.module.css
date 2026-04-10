@@ -30,7 +30,6 @@
   gap: 24px;
 }
 
-/* ✅ IMPROVED BRAND AREA */
 .brand {
   display: flex;
   align-items: center;
@@ -47,16 +46,11 @@
   display: block;
   background: transparent;
   border-radius: 10px;
-
-  /* sharpen + brighten */
   image-rendering: -webkit-optimize-contrast;
-
-  /* make logo pop */
   filter: brightness(1.5) contrast(1.25) saturate(1.1)
     drop-shadow(0 6px 18px rgba(120, 160, 255, 0.35));
 }
 
-/* ✅ STRONGER TEXT */
 .brandText {
   font-size: 1.25rem;
   font-weight: 700;
@@ -100,49 +94,6 @@
 .navButton:hover {
   transform: translateY(-2px);
   box-shadow: 0 14px 26px rgba(0, 0, 0, 0.28);
-}
-
-/* --- REST OF YOUR FILE UNCHANGED --- */
-
-.hero {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 96px 24px 84px;
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 48px;
-  align-items: center;
-}
-
-.badge {
-  display: inline-flex;
-  align-items: center;
-  padding: 9px 16px;
-  border-radius: 999px;
-  background: rgba(173, 196, 255, 0.11);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  color: #d6e2ff;
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 22px;
-}
-
-.heroText h1 {
-  font-size: 4rem;
-  line-height: 1.05;
-  letter-spacing: -0.03em;
-  margin: 0 0 22px;
-  max-width: 720px;
-}
-
-.heroText p {
-  font-size: 1.12rem;
-  line-height: 1.8;
-  color: #d8deea;
-  max-width: 640px;
-  margin: 0;
 }
 
 .hero {
@@ -295,6 +246,36 @@
   padding: 34px 24px 92px;
 }
 
+.missionSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 88px 24px 92px;
+}
+
+.missionHeader {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: start;
+  margin-bottom: 36px;
+}
+
+.missionHeader h2 {
+  font-size: 3rem;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  margin: 0;
+  max-width: 700px;
+}
+
+.missionIntro {
+  color: #d8deea;
+  line-height: 1.85;
+  margin: 34px 0 0;
+  max-width: 520px;
+  font-size: 1.04rem;
+}
+
 .sectionHeader {
   display: flex;
   justify-content: space-between;
@@ -321,7 +302,7 @@
 }
 
 .sectionText {
-  max-width: 500px;
+  max-width: 560px;
   color: #d8deea;
   line-height: 1.8;
   margin: 0;
@@ -410,17 +391,6 @@
   margin-top: 24px;
 }
 
-.aboutSection {
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.035),
-    rgba(255, 255, 255, 0.02)
-  );
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 88px 24px;
-}
-
 .aboutGrid {
   max-width: 1200px;
   margin: 0 auto;
@@ -439,6 +409,7 @@
   border-radius: 26px;
   padding: 26px;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.16);
+  height: 100%;
 }
 
 .aboutCard h3 {
@@ -451,6 +422,13 @@
   color: #d8deea;
   line-height: 1.75;
   margin: 0;
+}
+
+.sectionActions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 32px;
 }
 
 .footer {
@@ -490,6 +468,20 @@
     padding-top: 72px;
   }
 
+  .missionHeader {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .missionHeader h2 {
+    font-size: 2.4rem;
+  }
+
+  .missionIntro {
+    margin-top: 0;
+    max-width: 100%;
+  }
+
   .sectionHeader {
     flex-direction: column;
     align-items: flex-start;
@@ -521,7 +513,8 @@
     font-size: 2.7rem;
   }
 
-  .sectionHeader h2 {
+  .sectionHeader h2,
+  .missionHeader h2 {
     font-size: 2rem;
   }
 
@@ -538,7 +531,7 @@
 
   .hero,
   .section,
-  .aboutSection,
+  .missionSection,
   .footer {
     padding-left: 18px;
     padding-right: 18px;
@@ -555,6 +548,7 @@
 
   .heroText p,
   .sectionText,
+  .missionIntro,
   .appCard p,
   .aboutCard p {
     font-size: 0.98rem;
@@ -569,5 +563,9 @@
   .secondaryButton {
     width: 100%;
     text-align: center;
+  }
+
+  .sectionActions {
+    flex-direction: column;
   }
 }
